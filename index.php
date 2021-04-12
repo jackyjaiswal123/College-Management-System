@@ -2,13 +2,13 @@
 	session_start();
 	
 	require("conection/connect.php");
-	
+	$con= mysqli_connect('remotemysql.com', 'Xt9SLaf4VJ', 'fqpcD1WsmT', 'fqpcD1WsmT');
 	$msg="";
 	if(isset($_POST['btn_log'])){
 		$uname=$_POST['unametxt'];
 		$pwd=$_POST['pwdtxt'];
 		$sql1="SELECT * FROM users_tbl WHERE username='$uname' AND password='$pwd' ";
-		$sql=mysqli_query($var,$sql1);
+		$sql=mysqli_query($con,$sql1);
 						
 		$cout=mysqli_num_rows($sql);
 			if($cout>0){
