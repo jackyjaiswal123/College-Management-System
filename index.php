@@ -7,9 +7,8 @@
 	if(isset($_POST['btn_log'])){
 		$uname=$_POST['unametxt'];
 		$pwd=$_POST['pwdtxt'];
-		
-		$sql=mysqli_query($var,"SELECT * FROM users_tbl
-								WHERE username='$uname' AND password='$pwd' ");
+		$sql1="SELECT * FROM users_tbl WHERE username='$uname' AND password='$pwd' ";
+		$sql=mysqli_query($var,$sql1);
 						
 		$cout=mysqli_num_rows($sql);
 			if($cout>0){
