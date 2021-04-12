@@ -9,7 +9,7 @@ if(isset($_GET['rs_id']))
 	
 	if($opr=="del")
 {
-	$del_sql=mysql_query("DELETE FROM sub_tbl WHERE sub_id=$id");
+	$del_sql=mysqli_query("DELETE FROM sub_tbl WHERE sub_id=$id");
 	if($del_sql)
 		$msg="<div style='background-color: white;padding: 20px;border: 1px solid black;margin-bottom: 25px;''>"
                 . "<span class='p_font'>"
@@ -17,7 +17,7 @@ if(isset($_GET['rs_id']))
                 . "</span>"
                 . "</div>";
 	else
-		$msg="Could not Delete :".mysql_error();	
+		$msg="Could not Delete :".mysqli_error();	
 			
 }
 	echo $msg;
@@ -63,12 +63,12 @@ if(isset($_GET['rs_id']))
 		$key=$_POST['searchtxt'];
 	
 	if($key !="")
-		$sql_sel=mysql_query("SElECT * FROM sub_tbl WHERE sub_name  like '%$key%' ");
+		$sql_sel=mysqli_query("SElECT * FROM sub_tbl WHERE sub_name  like '%$key%' ");
 	else
-        $sql_sel=mysql_query("SELECT * FROM sub_tbl");
+        $sql_sel=mysqli_query("SELECT * FROM sub_tbl");
 		
     $i=0;
-    while($row=mysql_fetch_array($sql_sel)){
+    while($row=mysqli_fetch_array($sql_sel)){
     $i++;
     ?>
       <tr>
