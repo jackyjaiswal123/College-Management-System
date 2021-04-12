@@ -70,36 +70,36 @@
 		$key=$_POST['searchtxt'];
 	
 	if($key !="")
-		$sql_sel=mysql_query("SElECT * FROM sub_tbl WHERE f_name  like '%$key%' ");
+		$sql_sel=mysqli_query("SElECT * FROM sub_tbl WHERE f_name  like '%$key%' ");
 else
-        $sql_sel=mysql_query("SELECT * FROM stu_score_tbl GROUP BY stu_id");
+        $sql_sel=mysqli_query("SELECT * FROM stu_score_tbl GROUP BY stu_id");
     $i=0;
-    while($row=mysql_fetch_array($sql_sel)){
+    while($row=mysqli_fetch_array($sql_sel)){
 		$num=$row['stu_id'];
     $i++;
     $color=($i%2==0)?"lightblue":"white";
 		
-		$sql_stu=mysql_query("SELECT * FROM stu_tbl WHERE stu_id=".$row['stu_id']);
-		$fec_stu=mysql_fetch_array($sql_stu);
+		$sql_stu=mysqli_query("SELECT * FROM stu_tbl WHERE stu_id=".$row['stu_id']);
+		$fec_stu=mysqli_fetch_array($sql_stu);
 		
-		$sql_web=mysql_query("SELECT * FROM stu_score_tbl WHERE stu_id=".$row['stu_id']." AND sub_id=1");
-		$fec_web=mysql_fetch_array($sql_web);
+		$sql_web=mysqli_query("SELECT * FROM stu_score_tbl WHERE stu_id=".$row['stu_id']." AND sub_id=1");
+		$fec_web=mysqli_fetch_array($sql_web);
 		
-		$sql_cpp=mysql_query("SELECT * FROM stu_score_tbl WHERE stu_id=".$row['stu_id']." AND sub_id=2");
-		$fec_cpp=mysql_fetch_array($sql_cpp);
+		$sql_cpp=mysqli_query("SELECT * FROM stu_score_tbl WHERE stu_id=".$row['stu_id']." AND sub_id=2");
+		$fec_cpp=mysqli_fetch_array($sql_cpp);
 		
 		
-		$sql_vb=mysql_query("SELECT * FROM stu_score_tbl WHERE stu_id=".$row['stu_id']." AND sub_id=5");
-		$fec_ec=mysql_fetch_array($sql_vb);
+		$sql_vb=mysqli_query("SELECT * FROM stu_score_tbl WHERE stu_id=".$row['stu_id']." AND sub_id=5");
+		$fec_ec=mysqli_fetch_array($sql_vb);
 		
-		$sql_net=mysql_query("SELECT * FROM stu_score_tbl WHERE stu_id=".$row['stu_id']." AND sub_id=4");
-		$fec_netw=mysql_fetch_array($sql_net);
+		$sql_net=mysqli_query("SELECT * FROM stu_score_tbl WHERE stu_id=".$row['stu_id']." AND sub_id=4");
+		$fec_netw=mysqli_fetch_array($sql_net);
 		
-		$sql_dat=mysql_query("SELECT * FROM stu_score_tbl WHERE stu_id=".$row['stu_id']." AND sub_id=6");
-		$fec_data=mysql_fetch_array($sql_dat);
+		$sql_dat=mysqli_query("SELECT * FROM stu_score_tbl WHERE stu_id=".$row['stu_id']." AND sub_id=6");
+		$fec_data=mysqli_fetch_array($sql_dat);
 		
-		$sql_en=mysql_query("SELECT * FROM stu_score_tbl WHERE stu_id=".$row['stu_id']." AND sub_id=3");
-		$fec_eng=mysql_fetch_array($sql_en);
+		$sql_en=mysqli_query("SELECT * FROM stu_score_tbl WHERE stu_id=".$row['stu_id']." AND sub_id=3");
+		$fec_eng=mysqli_fetch_array($sql_en);
     ?>
       <tr bgcolor="<?php echo $color?>">
             <td><?php echo $i;?></td>
