@@ -14,7 +14,7 @@ if(isset($_POST['btn_sub'])){
 	$status=$_POST['genderrdo'];
 	$note=$_POST['notetxt'];
 	
-	$sql_add=mysql_query("INSERT INTO article_tbl 
+	$sql_add=mysqli_query("INSERT INTO article_tbl 
 							VALUES(
 								NULL,
 								$lid,
@@ -27,7 +27,7 @@ if(isset($_POST['btn_sub'])){
 	if($sql_add==true)
 		$msg="1 Record inserted...";
 	else
-		$smg="Insert Fail...".mysql_error();
+		$smg="Insert Fail...".mysqli_error();
 }
 
 //------------------uodate data----------
@@ -38,7 +38,7 @@ if(isset($_POST['btn_upd'])){
 	$status=$_POST['genderrdo'];
 	$note=$_POST['notetxt'];
 	
-	$sql_update=mysql_query("UPDATE  article_tbl SET	
+	$sql_update=mysqli_query("UPDATE  article_tbl SET	
 							loca_id='$loca_id' ,
 							title='$title' ,
 							content='$content' ,
@@ -71,8 +71,8 @@ if($sql_update==true)
 <?php
 if($opr=="upd")
 {
-	$sql_upd=mysql_query("SELECT * FROM article_tbl WHERE a_id=$id");
-	$rs_upd=mysql_fetch_array($sql_upd);
+	$sql_upd=mysqli_query("SELECT * FROM article_tbl WHERE a_id=$id");
+	$rs_upd=mysqli_fetch_array($sql_upd);
 ?>
 
     <div class="panel panel-default">
@@ -87,8 +87,8 @@ if($opr=="upd")
     					<select name="sudenttxt" style="width: 200px;">
                                             <option>Choose location</option>
                                 <?php
-                                   $location=mysql_query("SELECT * FROM location_tb");
-                                       while($row=mysql_fetch_array($location)){
+                                   $location=mysqli_query("SELECT * FROM location_tb");
+                                       while($row=mysqli_fetch_array($location)){
 										    if($row['loca_id']==$rs_upd['loca_id'])
 								   		$iselect="selected";
 									else
@@ -143,8 +143,8 @@ else
     					<select name="sudenttxt" style="width: 200px;">
                                             <option>Choose location</option>
                                 <?php
-                                   $location=mysql_query("SELECT * FROM location_tb");
-                                       while($row=mysql_fetch_array($location)){
+                                   $location=mysqli_query("SELECT * FROM location_tb");
+                                       while($row=mysqli_fetch_array($location)){
 								?>
                                  	<option value="<?php echo $row['loca_id']?>"><?php echo $row['l_name'];?></option>
                                 <?php
