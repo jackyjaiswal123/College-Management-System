@@ -8,7 +8,7 @@
 		$uname=$_POST['unametxt'];
 		$pwd=$_POST['pwdtxt'];
 		
-		$sql=mysqli_query("SELECT * FROM users_tbl
+		$sql=mysqli_query($var,"SELECT * FROM users_tbl
 								WHERE username='$uname' AND password='$pwd' 
 								
 							");
