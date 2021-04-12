@@ -25,7 +25,7 @@ if(isset($_POST['btn_sub'])){
 	$mail=$_POST['emailtxt'];
 	$note=$_POST['notetxt'];	
 	
-$sql_ins=mysql_query("INSERT INTO teacher_tbl 
+$sql_ins=mysqli_query("INSERT INTO teacher_tbl 
 						VALUES(
 							NULL,
 							'$f_name',
@@ -46,7 +46,7 @@ if($sql_ins==true)
 	$msg="1 Row Inserted";	
 	
 else
-	$msg="Insert Error:".mysql_error();
+	$msg="Insert Error:".mysqli_error();
 	}
 //------------------uodate data----------
 if(isset($_POST['btn_upd'])){
@@ -64,7 +64,7 @@ $mail=$_POST['emailtxt'];
 $note=$_POST['notetxt'];
 
 
-$sql_update=mysql_query("UPDATE teacher_tbl SET
+$sql_update=mysqli_query("UPDATE teacher_tbl SET
                         f_name='$f_name' ,
                         l_name='$l_name' ,
                         gender='$gender' ,
@@ -104,8 +104,8 @@ if($sql_update==true)
 <?php
 if($opr=="upd")
 {
-	$sql_upd=mysql_query("SELECT * FROM teacher_tbl WHERE teacher_id=$id");
-	$rs_upd=mysql_fetch_array($sql_upd);
+	$sql_upd=mysqli_query("SELECT * FROM teacher_tbl WHERE teacher_id=$id");
+	$rs_upd=mysqli_fetch_array($sql_upd);
 	list($y,$m,$d)=explode('-',$rs_upd['dob']);
 ?>
 
