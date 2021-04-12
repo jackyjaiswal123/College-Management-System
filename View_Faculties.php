@@ -9,11 +9,11 @@ if(isset($_GET['rs_id']))
 	
 	if($opr=="del")
 {
-	$del_sql=mysql_query("DELETE FROM facuties_tbl WHERE faculties_id=$id");
+	$del_sql=mysqli_query("DELETE FROM facuties_tbl WHERE faculties_id=$id");
 	if($del_sql)
 		$msg="1 Record Deleted... !";
 	else
-		$msg="Could not Delete :".mysql_error();	
+		$msg="Could not Delete :".mysqli_error();	
 			
 }
 	echo $msg;
@@ -54,13 +54,13 @@ if(isset($_GET['rs_id']))
 		$key=$_POST['searchtxt'];
 	
 	if($key !="")
-		$sql_sel=mysql_query("SElECT * FROM facuties_tbl WHERE faculties_name  like '%$key%' ");
+		$sql_sel=mysqli_query("SElECT * FROM facuties_tbl WHERE faculties_name  like '%$key%' ");
 	else
-    		$sql_sel=mysql_query("SELECT * FROM facuties_tbl");
+    		$sql_sel=mysqli_query("SELECT * FROM facuties_tbl");
 			
 			
 			$i=0;
-    while($row=mysql_fetch_array($sql_sel)){
+    while($row=mysqli_fetch_array($sql_sel)){
     $i++;
     	?>
         <tr>
