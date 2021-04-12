@@ -16,7 +16,7 @@ if(isset($_POST['btn_sub'])){
 	
 	
 
-$sql_ins=mysql_query("INSERT INTO sub_tbl 
+$sql_ins=mysqli_query("INSERT INTO sub_tbl 
 						VALUES(
 							NULL,
 							'$fa_name',
@@ -30,7 +30,7 @@ $sql_ins=mysql_query("INSERT INTO sub_tbl
 if($sql_ins==true)
 	$msg="1 Row Inserted";
 else
-	$msg="Insert Error:".mysql_error();
+	$msg="Insert Error:".mysqli_error();
 	
 }
 
@@ -43,7 +43,7 @@ if(isset($_POST['btn_upd'])){
 	$note=$_POST['notetxt'];
 	
 	
-	$sql_update=mysql_query("UPDATE sub_tbl SET
+	$sql_update=mysqli_query("UPDATE sub_tbl SET
 							faculties_id='$fac_id' ,
 							teacher_id='$tea_id' ,
 							semester='$semester' ,
@@ -78,8 +78,8 @@ if($sql_update==true)
 
 if($opr=="upd")
 {
-	$sql_upd=mysql_query("SELECT * FROM sub_tbl WHERE sub_id=$id");
-	$rs_upd=mysql_fetch_array($sql_upd);
+	$sql_upd=mysqli_query("SELECT * FROM sub_tbl WHERE sub_id=$id");
+	$rs_upd=mysqli_fetch_array($sql_upd);
 	
 ?>
 <div class="panel panel-default">
@@ -94,8 +94,8 @@ if($opr=="upd")
     					<select name="factxt" style="width: 200px;">
                                             <option>Facultie's name</option>
                             <?php
-                               $fac_name=mysql_query("SELECT * FROM facuties_tbl");
-							   while($row=mysql_fetch_array($fac_name)){
+                               $fac_name=mysqli_query("SELECT * FROM facuties_tbl");
+							   while($row=mysqli_fetch_array($fac_name)){
 								   if($row['faculties_id']==$rs_upd['faculties_id'])
 								   		$iselect="selected";
 									else
@@ -115,8 +115,8 @@ if($opr=="upd")
                                             <select name="techtxt" style="width: 200px">
                                             <option>Teacher's name</option>
                             <?php
-                                $te_name=mysql_query("SELECT * FROM teacher_tbl");
-								while($row=mysql_fetch_array($te_name)){
+                                $te_name=mysqli_query("SELECT * FROM teacher_tbl");
+								while($row=mysqli_fetch_array($te_name)){
 									if($row['teacher_id']==$rs_upd['teacher_id'])
 								   		$iselect="selected";
 									else
@@ -171,8 +171,8 @@ else
     					<select name="factxt" style="width: 200px;">
                                             <option>Facultie's name</option>
                             <?php
-                               $fac_name=mysql_query("SELECT * FROM facuties_tbl");
-							   while($row=mysql_fetch_array($fac_name)){
+                               $fac_name=mysqli_query("SELECT * FROM facuties_tbl");
+							   while($row=mysqli_fetch_array($fac_name)){
 								?>
                         		<option value="<?php echo $row['faculties_id'];?>"> <?php echo $row['faculties_name'];?> </option>
                                 <?php 
@@ -187,8 +187,8 @@ else
                                             <select name="techtxt" style="width: 200px">
                                             <option>Teacher's name</option>
                             <?php
-                                $te_name=mysql_query("SELECT * FROM teacher_tbl");
-								while($row=mysql_fetch_array($te_name)){
+                                $te_name=mysqli_query("SELECT * FROM teacher_tbl");
+								while($row=mysqli_fetch_array($te_name)){
 								?>
                                 <option value="<?php echo $row['teacher_id'];?>"> <?php echo $row['f_name'] ; echo " "; echo $row['l_name'];?> </option>
                                 	
