@@ -12,7 +12,7 @@ if(isset($_POST['btn_sub'])){
 	$note=$_POST['notetxt'];	
 	
 
-$sql_ins=mysql_query("INSERT INTO facuties_tbl 
+$sql_ins=mysqli_query("INSERT INTO facuties_tbl 
 						VALUES(
 							NULL,
 							'$facuties_name',
@@ -22,7 +22,7 @@ $sql_ins=mysql_query("INSERT INTO facuties_tbl
 if($sql_ins==true)
 	$msg="1 Row Inserted";
 else
-	$msg="Insert Error:".mysql_error();
+	$msg="Insert Error:".mysqli_error();
 	
 }
 
@@ -31,7 +31,7 @@ if(isset($_POST['btn_upd'])){
 	$fac_name=$_POST['fnametxt'];
 	$note=$_POST['notetxt'];	
 	
-	$sql_update=mysql_query("UPDATE facuties_tbl SET 
+	$sql_update=mysqli_query("UPDATE facuties_tbl SET 
 								faculties_name='$fac_name',
 								note='$note'
 							WHERE
@@ -61,8 +61,8 @@ if(isset($_POST['btn_upd'])){
 
 if($opr=="upd")
 {
-	$sql_upd=mysql_query("SELECT * FROM facuties_tbl WHERE faculties_id=$id");
-	$rs_upd=mysql_fetch_array($sql_upd);
+	$sql_upd=mysqli_query("SELECT * FROM facuties_tbl WHERE faculties_id=$id");
+	$rs_upd=mysqli_fetch_array($sql_upd);
 	
 ?>
 
