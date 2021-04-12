@@ -15,7 +15,7 @@ if(isset($_POST['btn_sub'])){
 	$note=$_POST['notetxt'];	
 	
 
-$sql_ins=mysql_query("INSERT INTO users_tbl 
+$sql_ins=mysqli_query("INSERT INTO users_tbl 
 						VALUES(
 							NULL,
 							'$username',
@@ -27,7 +27,7 @@ $sql_ins=mysql_query("INSERT INTO users_tbl
 if($sql_ins==true)
 	$msg="1 Row Inserted";
 else
-	$msg="Insert Error:".mysql_error();
+	$msg="Insert Error:".mysqli_error();
 	
 }
 
@@ -38,7 +38,7 @@ if(isset($_POST['btn_upd'])){
 	$type=$_POST['typetxt'];
 	$note=$_POST['notetxt'];
 	
-	$sql_update=mysql_query("UPDATE users_tbl SET 
+	$sql_update=mysqli_query("UPDATE users_tbl SET 
 								username='$username' ,
 								password='$pwd' , 
 								type='$note' ,
@@ -49,7 +49,7 @@ if(isset($_POST['btn_upd'])){
 	if($sql_update==true)
 		header("location:?tag=view_users");
 	else
-		$msg="Update Fail".mysql_error();
+		$msg="Update Fail".mysqli_error();
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -64,8 +64,8 @@ if(isset($_POST['btn_upd'])){
 <?php
 if($opr=="upd")
 {
-	$sql_upd=mysql_query("SELECT * FROM users_tbl WHERE u_id=$id");
-	$rs_upd=mysql_fetch_array($sql_upd);
+	$sql_upd=mysqli_query("SELECT * FROM users_tbl WHERE u_id=$id");
+	$rs_upd=mysqli_fetch_array($sql_upd);
 ?>
 	<div id="top_style">
         <div id="top_style_text">
