@@ -1,14 +1,15 @@
 <?php
 	session_start();
 	
-	require("conection/connect.php");
-	$con= mysqli_connect("remotemysql.com", "Xt9SLaf4VJ", "fqpcD1WsmT", "fqpcD1WsmT");
+	//require("conection/connect.php");
+	$con= mysqli_connect("remotemysql.com", "fqpcD1WsmT", "Xt9SLaf4VJ" "fqpcD1WsmT");
 	$msg="";
 	if(isset($_POST['btn_log'])){
 		$uname=$_POST['unametxt'];
 		$pwd=$_POST['pwdtxt'];
 		$sql1="SELECT * FROM users_tbl WHERE username='$uname' AND password='$pwd' ";
-		$sql=mysqli_query($con,$sql1);
+		//mysqli_query("GRANT ALL PRIVILEGES ON dbname.* TO 'yourusername'@'%' IDENTIFIED BY '12345' ");
+		$sql=mysqli_query($con,"SELECT * FROM users_tbl WHERE username='$uname' AND password='$pwd' ");
 						
 		$cout=mysqli_num_rows($sql);
 			if($cout>0){
