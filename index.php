@@ -9,9 +9,7 @@
 		$pwd=$_POST['pwdtxt'];
 		
 		$sql=mysqli_query($var,"SELECT * FROM users_tbl
-								WHERE username='$uname' AND password='$pwd' 
-								
-							");
+								WHERE username='$uname' AND password='$pwd' ");
 						
 		$cout=mysqli_num_rows($sql);
 			if($cout>0){
