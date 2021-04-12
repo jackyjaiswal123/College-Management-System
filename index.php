@@ -2,7 +2,7 @@
 	session_start();
 	
 	//require("conection/connect.php");
-	$con= mysqli_connect("remotemysql.com", "fqpcD1WsmT", "Xt9SLaf4VJ" "fqpcD1WsmT");
+	$con= mysqli_connect("remotemysql.com", "fqpcD1WsmT", "Xt9SLaf4VJ" ,"fqpcD1WsmT");
 	$msg="";
 	if(isset($_POST['btn_log'])){
 		$uname=$_POST['unametxt'];
