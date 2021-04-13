@@ -1,13 +1,14 @@
 <?php
-	$msg="";
-	$opr="";
-	if(isset($_GET['opr']))
+$msg="";
+$opr="";
+$con= mysqli_connect("remotemysql.com", "fqpcD1WsmT", "Xt9SLaf4VJ" ,"fqpcD1WsmT");
+if(isset($_GET['opr']))
 	$opr=$_GET['opr'];
 	
 if(isset($_GET['rs_id']))
 	$id=$_GET['rs_id'];
 	
-	$con= mysqli_connect("remotemysql.com", "fqpcD1WsmT", "Xt9SLaf4VJ" ,"fqpcD1WsmT");
+	
 	if($opr=="del")
 {
 	$del_sql=mysqli_query($con,"DELETE FROM   article_tbl WHERE a_id=$id");
