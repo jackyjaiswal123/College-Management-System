@@ -59,9 +59,9 @@ if(isset($_GET['rs_id']))
 				$key=$_POST['searchtxt'];
 			
 			if($key !="")
-				$sql_sel=mysqlii_query("SElECT * FROM location_tb WHERE  l_name  like '%$key%' ");
+				$sql_sel=mysqlii_query($con,"SElECT * FROM location_tb WHERE  l_name  like '%$key%' ");
 			else
-			 $sql_sel=mysqlii_query("SELECT * FROM location_tb");
+			 $sql_sel=mysqlii_query($con,"SELECT * FROM location_tb");
 			 
 			 $i=0;
 			while($row=mysqlii_fetch_array($sql_sel)){
