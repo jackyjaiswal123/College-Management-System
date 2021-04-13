@@ -64,9 +64,9 @@ if(isset($_GET['rs_id']))
 		$key=$_POST['searchtxt'];
 	
 	if($key !="")
-		$sql_sel=mysqli_query("SElECT * FROM sub_tbl WHERE sub_name  like '%$key%' ");
+		$sql_sel=mysqli_query($con,"SElECT * FROM sub_tbl WHERE sub_name  like '%$key%' ");
 	else
-        $sql_sel=mysqli_query("SELECT * FROM sub_tbl");
+        $sql_sel=mysqli_query($con,"SELECT * FROM sub_tbl");
 		
     $i=0;
     while($row=mysqli_fetch_array($sql_sel)){
