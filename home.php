@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="css/home.css"/>
-<title>College management system made by Rajendra Arora..</title>
+<title>College management system made by Ankit Jaiswal..</title>
 </head>
 
 <body>
@@ -11,15 +11,14 @@
   		<div class="panel-heading"><h1>College Management System</h1></div>
                 <div class="panel-body"><br><br>
         <div>
-            <img src="images/rtupic.jpg" width="855" style="text-align: center;" height="308" onmousedown="return false;"  />
+            <img src="images/sfit_buiding.jpg" width="855" style="text-align: center;" height="308" onmousedown="return false;"  />
         </div><br><br>
         <div class="middle_text">
-            <p><strong>Rajasthan Technical University (RTU) is an affiliating university located in Kota in the state of Rajasthan, India. The university was established in 2006.</strong></p>
-        </div>
+            <p><strong>St. Francis Institute of Technology (SFIT) was established in 1999 with a view to create an Engineering Degree Institute to fulfill the long felt public need of an Institute of Excellence in Borivali.</strong></p>     
+	</div>
                 
         <div class="text_para_home">
-            <p>RTU is an affiliating university. Its affiliated colleges offer the degrees of Bachelor of Technology (B.Tech), Master of Technology (M.Tech), Master of Business Administration (MBA), Master of Computer Applications (MCA) and Bachelor of Hotel Management and Catering Technology (BHMCT).
-As of April 2011, RTU affiliates 202 colleges. B.Tech degrees are offered at nine government aided institutes and 109 are private ones. MBA degrees are offered at seven government aided institutes and 122 are private ones. MCA degrees are offered in at seven government aided institutes and 25 are private ones. M.Tech is offered in 24 colleges and BHMCT in four colleges. In addition, two colleges offer Bachelor of Architecture (B.Arch) degrees. Rajasthan University Publishes Courses Results Semester wise.</p>         
+            <p>SFIT has five UG Programs and two PG Programs in the most coveted disciplines considering both industrial need and public preference. These courses would lead to award of the Degree of Bachelor of Engineering (B.E.) in Computer Engineering, Electronics & Telecommunication Engineering, Information Technology, Electrical Engineering and Mechanical Engineering and Master of Engineering (M.E.) as well as Ph.D. (Technology) in Computer Engineering and Electronics & Telecommunication Engineering.</p>         
         </div>   
                 </div>
         </div>
