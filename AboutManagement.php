@@ -14,7 +14,7 @@
             <div class="panel-heading"><h1 style="text-align: center;"><span class="glyphicon glyphicon-user"></span> About Project!</h1></div>
   			<div class="panel-body">
 			<div class="container">
-				<p style="text-align:center;">Projectworlds.</p>
+				<p style="text-align:center;"></p>
                         </div><br><br>
                         
                         <h1><strong>Project title: </strong>College Management System</h1>
