@@ -1,6 +1,7 @@
 <?php
 	$msg="";
 	$opr="";
+	$con= mysqli_connect("remotemysql.com", "fqpcD1WsmT", "Xt9SLaf4VJ" ,"fqpcD1WsmT");
 	if(isset($_GET['opr']))
 	$opr=$_GET['opr'];
 	
@@ -9,7 +10,7 @@ if(isset($_GET['rs_id']))
 	
 	if($opr=="del")
 {
-	$del_sql=mysqlii_query("DELETE FROM location_tb WHERE loca_id=$id");
+	$del_sql=mysqlii_query($con,"DELETE FROM location_tb WHERE loca_id=$id");
 	if($del_sql)
 		$msg="<div style='background-color: white;padding: 20px;border: 1px solid black;margin-bottom: 25px;''>"
                 . "<span class='p_font'>"
