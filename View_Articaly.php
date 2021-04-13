@@ -7,9 +7,10 @@
 if(isset($_GET['rs_id']))
 	$id=$_GET['rs_id'];
 	
+	$con= mysqli_connect("remotemysql.com", "fqpcD1WsmT", "Xt9SLaf4VJ" ,"fqpcD1WsmT");
 	if($opr=="del")
 {
-	$del_sql=mysqli_query("DELETE FROM   article_tbl WHERE a_id=$id");
+	$del_sql=mysqli_query($con,"DELETE FROM   article_tbl WHERE a_id=$id");
 	if($del_sql)
 		$msg="<div style='background-color: white;padding: 20px;border: 1px solid black;margin-bottom: 25px;''>"
                 . "<span class='p_font'>"
