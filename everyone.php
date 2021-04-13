@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	$con= mysqli_connect("remotemysql.com", "fqpcD1WsmT", "Xt9SLaf4VJ" ,"fqpcD1WsmT");
 	require("conection/connect.php");
 	$tag="";
 	if (isset($_GET['tag']))
