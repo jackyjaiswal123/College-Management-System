@@ -62,9 +62,9 @@ if(isset($_GET['rs_id']))
 		$key=$_POST['searchtxt'];
 	
 	if($key !="")
-		$sql_sel=mysqli_query("SElECT * FROM users_tbl WHERE username  like '%$key%' ");
+		$sql_sel=mysqli_query($con,"SElECT * FROM users_tbl WHERE username  like '%$key%' ");
 	else
-        $sql_sel=mysqli_query("SELECT * FROM users_tbl");
+        $sql_sel=mysqli_query($con,"SELECT * FROM users_tbl");
 		
 		
     $i=0;
