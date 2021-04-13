@@ -73,15 +73,15 @@ if($sql_update==true)
 <?php
 if($opr=="upd")
 {
-	$sql_upd=mysqli_query("SELECT * FROM article_tbl WHERE a_id=$id");
+	$sql_upd=mysqli_query("$con,SELECT * FROM article_tbl WHERE a_id=$id");
 	$rs_upd=mysqli_fetch_array($sql_upd);
 ?>
 
     <div class="panel panel-default">
-  		<div class="panel-heading"><h1><span class="glyphicon glyphicon-align-justify"></span> Artical's Update Form</h1></div>
+  		<div class="panel-heading"><h1><span class="glyphicon glyphicon-align-justify"></span> Article's Update Form</h1></div>
   			<div class="panel-body">
 			<div class="container">
-				<p style="text-align:center;">Here, you'll update your artical's records into database.</p>
+				<p style="text-align:center;">Here, you'll update your article's records into database.</p>
 			</div>
                   <form method="post">    
                     <div class="teacher_bday_box" style="margin-left: 0px;">
