@@ -95,7 +95,7 @@ if($opr=="upd")
     					<select name="factxt" style="width: 200px;">
                                             <option>Facultie's name</option>
                             <?php
-                               $fac_name=mysqli_query("SELECT * FROM facuties_tbl");
+                               $fac_name=mysqli_query($con,"SELECT * FROM facuties_tbl");
 							   while($row=mysqli_fetch_array($fac_name)){
 								   if($row['faculties_id']==$rs_upd['faculties_id'])
 								   		$iselect="selected";
@@ -116,7 +116,7 @@ if($opr=="upd")
                                             <select name="techtxt" style="width: 200px">
                                             <option>Teacher's name</option>
                             <?php
-                                $te_name=mysqli_query("SELECT * FROM teacher_tbl");
+                                $te_name=mysqli_query($con,"SELECT * FROM teacher_tbl");
 								while($row=mysqli_fetch_array($te_name)){
 									if($row['teacher_id']==$rs_upd['teacher_id'])
 								   		$iselect="selected";
@@ -172,7 +172,7 @@ else
     					<select name="factxt" style="width: 200px;">
                                             <option>Facultie's name</option>
                             <?php
-                               $fac_name=mysqli_query("SELECT * FROM facuties_tbl");
+                               $fac_name=mysqli_query($con,"SELECT * FROM facuties_tbl");
 							   while($row=mysqli_fetch_array($fac_name)){
 								?>
                         		<option value="<?php echo $row['faculties_id'];?>"> <?php echo $row['faculties_name'];?> </option>
@@ -188,7 +188,7 @@ else
                                             <select name="techtxt" style="width: 200px">
                                             <option>Teacher's name</option>
                             <?php
-                                $te_name=mysqli_query("SELECT * FROM teacher_tbl");
+                                $te_name=mysqli_query($con,"SELECT * FROM teacher_tbl");
 								while($row=mysqli_fetch_array($te_name)){
 								?>
                                 <option value="<?php echo $row['teacher_id'];?>"> <?php echo $row['f_name'] ; echo " "; echo $row['l_name'];?> </option>
