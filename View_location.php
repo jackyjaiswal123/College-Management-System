@@ -10,7 +10,7 @@ if(isset($_GET['rs_id']))
 	
 	if($opr=="del")
 {
-	$del_sql=mysqlii_query($con,"DELETE FROM location_tb WHERE loca_id=$id");
+	$del_sql=mysqli_query($con,"DELETE FROM location_tb WHERE loca_id=$id");
 	if($del_sql)
 		$msg="<div style='background-color: white;padding: 20px;border: 1px solid black;margin-bottom: 25px;''>"
                 . "<span class='p_font'>"
@@ -18,7 +18,7 @@ if(isset($_GET['rs_id']))
                 . "</span>"
                 . "</div>";
 	else
-		$msg="Could not Delete :".mysqlii_error();	
+		$msg="Could not Delete :".mysqli_error();	
 			
 }
 	echo $msg;
@@ -59,12 +59,12 @@ if(isset($_GET['rs_id']))
 				$key=$_POST['searchtxt'];
 			
 			if($key !="")
-				$sql_sel=mysqlii_query($con,"SElECT * FROM location_tb WHERE  l_name  like '%$key%' ");
+				$sql_sel=mysqli_query($con,"SElECT * FROM location_tb WHERE  l_name  like '%$key%' ");
 			else
-			 $sql_sel=mysqlii_query($con,"SELECT * FROM location_tb");
+			 $sql_sel=mysqli_query($con,"SELECT * FROM location_tb");
 			 
 			 $i=0;
-			while($row=mysqlii_fetch_array($sql_sel)){
+			while($row=mysqli_fetch_array($sql_sel)){
 				$i++;
 			?>	 
 			<tr>
