@@ -1,7 +1,8 @@
 <?php
 $id="";
 $opr="";
-$con= mysqli_connect("remotemysqli.com", "fqpcD1WsmT", "Xt9SLaf4VJ" ,"fqpcD1WsmT");
+$con= mysqli_connect("remotemysql.com", "fqpcD1WsmT", "Xt9SLaf4VJ" ,"fqpcD1WsmT");
+
 if(isset($_GET['opr']))
 	$opr=$_GET['opr'];
 
@@ -47,10 +48,14 @@ if(isset($_POST['btn_upd'])){
 							WHERE
 								u_id=$id
 							");
-	if($sql_update==true)
-		header("location:?tag=view_users");
+	if($sql_update=='true')
+		echo "<div style='background-color: white;padding: 20px;border: 1px solid black;margin-bottom: 25px;''>"
+                . "<span class='p_font'>"
+                . "Record Updated Successfully... !"
+                . "</span>"
+                . "</div>";
 	else
-		$msg="Update Fail".mysqli_error();
+		$msg="Update Failed...!";
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -66,7 +71,7 @@ if(isset($_POST['btn_upd'])){
 
 if($opr=="upd")
 {
-	$sql_upd=mysqli_query($con,"SELECT * FROM users_tbl WHERE u_id=$id");
+	$sql_upd=mysqli_query("SELECT * FROM users_tbl WHERE u_id=$id");
 	$rs_upd=mysqli_fetch_array($sql_upd);
 	
 ?>
@@ -110,7 +115,7 @@ else
         <div class='faculty_pos'>
 	
             <input type="text" style="width: 250px;" class="form-control" name="usertxt" placeholder='User Name'/><br>
-	    <input type="text" style="width: 250px;" class="form-control" name="pwdtxt" placeholder='Password'/><br>
+	    <input type="text" style="width: 250px;" class="form-control" name="pwdtxt" placeholder='Passwprd'/><br>
 	    <input type="text" style="width: 250px;" class="form-control" name="typetxt" placeholder='Type'/><br>
             
             <textarea name="notetxt" class="form-control" cols="18" placeholder='Add notes..' rows="4"></textarea><br><Br>
