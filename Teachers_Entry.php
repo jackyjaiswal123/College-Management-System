@@ -1,11 +1,11 @@
 <?php
 
-	$msg="";
-	$opr="";
-	$id="";
-	$con= mysqli_connect("remotemysql.com", "fqpcD1WsmT", "Xt9SLaf4VJ" ,"fqpcD1WsmT");
+$msg="";
+$opr="";
+$id="";
+$con= mysqli_connect("remotemysql.com", "fqpcD1WsmT", "Xt9SLaf4VJ" ,"fqpcD1WsmT");
 	
-	if(isset($_GET['opr'])){
+if(isset($_GET['opr'])){
 	$opr=$_GET['opr'];}
 	
 if(isset($_GET['rs_id'])){
