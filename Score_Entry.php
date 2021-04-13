@@ -96,7 +96,7 @@ if($opr=="upd")
     					<select name="sudenttxt" style="width: 200px;">
                                             <option>Student's name</option>
                             <?php
-                          		$student_name=mysqli_query("SELECT * FROM stu_tbl");
+                          		$student_name=mysqli_query($con,"SELECT * FROM stu_tbl");
 								while($row=mysqli_fetch_array($student_name)){
 									 if($row['stu_id']==$rs_upd['stu_id'])
 								   		$iselect="selected";
@@ -117,7 +117,7 @@ if($opr=="upd")
                                             <select name="factxt" style="width: 200px">
                                             <option>Faculties's name</option>
                             <?php
-                               $fac_name=mysqli_query("SELECT * FROM facuties_tbl");
+                               $fac_name=mysqli_query($con,"SELECT * FROM facuties_tbl");
 							   while($row=mysqli_fetch_array($fac_name)){
 								    if($row['faculties_id']==$rs_upd['faculties_id'])
 								   		$iselect="selected";
@@ -137,7 +137,7 @@ if($opr=="upd")
                                             <select name="subjecttxt" style="width: 200px">
                                             <option>Subject's name</option>
                             <?php
-                               $subject=mysqli_query("SELECT * FROM sub_tbl");
+                               $subject=mysqli_query($con,"SELECT * FROM sub_tbl");
 							   while($row=mysqli_fetch_array($subject)){
 								   if($row['sub_id']==$rs_upd['sub_id'])
 								   		$iselect="selected";
@@ -189,7 +189,7 @@ else
     					<select name="sudenttxt" style="width: 200px;">
                                             <option>Student's name</option>
                             <?php
-                          		$student_name=mysqli_query("SELECT * FROM stu_tbl");
+                          		$student_name=mysqli_query($con,"SELECT * FROM stu_tbl");
 								while($row=mysqli_fetch_array($student_name)){
 								?>
                                 <option value="<?php echo $row['stu_id'];?>"> <?php echo $row['f_name']; echo" "; echo $row['l_name'];?> </option>
@@ -206,7 +206,7 @@ else
                                             <select name="factxt" style="width: 200px">
                                             <option>Faculties's name</option>
                             <?php
-                               $fac_name=mysqli_query("SELECT * FROM facuties_tbl");
+                               $fac_name=mysqli_query($con,"SELECT * FROM facuties_tbl");
 							   while($row=mysqli_fetch_array($fac_name)){
 								?>
                         		<option value="<?php echo $row['faculties_id'];?>"> <?php echo $row['faculties_name'];?> </option>
@@ -222,7 +222,7 @@ else
                                             <select name="subjecttxt" style="width: 200px">
                                             <option>Subject's name</option>
                             <?php
-                               $subject=mysqli_query("SELECT * FROM sub_tbl");
+                               $subject=mysqli_query($con,"SELECT * FROM sub_tbl");
 							   while($row=mysqli_fetch_array($subject)){
 							?>
                             <option value="<?php echo $row['sub_id'];?>"> <?php echo $row['sub_name'];?> </option>
