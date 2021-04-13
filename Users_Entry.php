@@ -1,7 +1,7 @@
 <?php
 $id="";
 $opr="";
-$con= mysqlii_connect("remotemysqli.com", "fqpcD1WsmT", "Xt9SLaf4VJ" ,"fqpcD1WsmT");
+$con= mysqli_connect("remotemysqli.com", "fqpcD1WsmT", "Xt9SLaf4VJ" ,"fqpcD1WsmT");
 if(isset($_GET['opr']))
 	$opr=$_GET['opr'];
 
