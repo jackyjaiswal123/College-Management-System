@@ -3,6 +3,7 @@
 	$msg="";
 	$opr="";
 	$id="";
+	$con= mysqli_connect("remotemysql.com", "fqpcD1WsmT", "Xt9SLaf4VJ" ,"fqpcD1WsmT");
 	
 	if(isset($_GET['opr'])){
 	$opr=$_GET['opr'];}
@@ -25,7 +26,7 @@ if(isset($_POST['btn_sub'])){
 	$mail=$_POST['emailtxt'];
 	$note=$_POST['notetxt'];	
 	
-$sql_ins=mysqli_query("INSERT INTO teacher_tbl 
+$sql_ins=mysqli_query($con,"INSERT INTO teacher_tbl 
 						VALUES(
 							NULL,
 							'$f_name',
@@ -64,7 +65,7 @@ $mail=$_POST['emailtxt'];
 $note=$_POST['notetxt'];
 
 
-$sql_update=mysqli_query("UPDATE teacher_tbl SET
+$sql_update=mysqli_query($con,"UPDATE teacher_tbl SET
                         f_name='$f_name' ,
                         l_name='$l_name' ,
                         gender='$gender' ,
@@ -104,7 +105,7 @@ if($sql_update==true)
 <?php
 if($opr=="upd")
 {
-	$sql_upd=mysqli_query("SELECT * FROM teacher_tbl WHERE teacher_id=$id");
+	$sql_upd=mysqli_query($con,"SELECT * FROM teacher_tbl WHERE teacher_id=$id");
 	$rs_upd=mysqli_fetch_array($sql_upd);
 	list($y,$m,$d)=explode('-',$rs_upd['dob']);
 ?>
