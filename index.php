@@ -41,7 +41,7 @@
 <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="css/login.css" />
-<title>Rajasthan Technical University | College management System.</title>
+<title>St. Francis Institute of Technology | College management System.</title>
 </head>
 
 <body>
