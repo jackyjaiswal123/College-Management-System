@@ -35,7 +35,7 @@ if(isset($_GET['rs_id']))
             <input type="text" name="searchtxt" class="input_box_pos form-control" placeholder="Search name.." />
             <div class="btn_pos_search">
             <input type="submit" class="btn btn-primary btn-large" name="btnsearch" value="Search"/>&nbsp;&nbsp;
-            <a href="?tag=student_entry"><input type="button" class="btn btn-large btn-primary" value="Register new" name="butAdd"/></a>
+            <a href="?tag=users_entry"><input type="button" class="btn btn-large btn-primary" value="Register new" name="butAdd"/></a>
             </div>
         </form>
     </div><br><br>
