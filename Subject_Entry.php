@@ -1,6 +1,7 @@
 <?php
 $id="";
 $opr="";
+$con= mysqli_connect("remotemysql.com", "fqpcD1WsmT", "Xt9SLaf4VJ" ,"fqpcD1WsmT");
 if(isset($_GET['opr']))
 	$opr=$_GET['opr'];
 
@@ -16,7 +17,7 @@ if(isset($_POST['btn_sub'])){
 	
 	
 
-$sql_ins=mysqli_query("INSERT INTO sub_tbl 
+$sql_ins=mysqli_query($con,"INSERT INTO sub_tbl 
 						VALUES(
 							NULL,
 							'$fa_name',
@@ -43,7 +44,7 @@ if(isset($_POST['btn_upd'])){
 	$note=$_POST['notetxt'];
 	
 	
-	$sql_update=mysqli_query("UPDATE sub_tbl SET
+	$sql_update=mysqli_query($con,"UPDATE sub_tbl SET
 							faculties_id='$fac_id' ,
 							teacher_id='$tea_id' ,
 							semester='$semester' ,
@@ -78,7 +79,7 @@ if($sql_update==true)
 
 if($opr=="upd")
 {
-	$sql_upd=mysqli_query("SELECT * FROM sub_tbl WHERE sub_id=$id");
+	$sql_upd=mysqli_query($con,"SELECT * FROM sub_tbl WHERE sub_id=$id");
 	$rs_upd=mysqli_fetch_array($sql_upd);
 	
 ?>
