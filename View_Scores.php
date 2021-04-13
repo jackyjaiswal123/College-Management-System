@@ -65,9 +65,9 @@ if(isset($_GET['rs_id']))
 		$key=$_POST['searchtxt'];
 	
 	if($key !="")
-		$sql_sel=mysqli_query("SElECT * FROM stu_score_tbl WHERE stu_id  like '%$key%' ");
+		$sql_sel=mysqli_query($con,"SElECT * FROM stu_score_tbl WHERE stu_id  like '%$key%' ");
 	else
-        $sql_sel=mysqli_query("SELECT * FROM stu_score_tbl");
+        $sql_sel=mysqli_query($con,"SELECT * FROM stu_score_tbl");
 		
     $i=0;
     while($row=mysqli_fetch_array($sql_sel)){
