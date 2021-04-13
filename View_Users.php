@@ -30,62 +30,65 @@ if(isset($_GET['rs_id']))
 </head>
 
 <body>
-<div id="style_div" >
-<form method="post">
-<table width="755">
-	<tr>
-    	<td width="190px" style="font-size:18px; color:#006; text-indent:30px;">View Users</td>
-        <td><a href="?tag=susers_entry"><input type="button" title="Add new student" name="butAdd" value="Add New" id="button-search" /></a></td>
-        <td><input type="text" name="searchtxt" title="Enter name for search " class="search" autocomplete="off"/></td>
-        <td style="float:right"><input type="submit" name="btnsearch" value="Search" id="button-search" title="Search Users" /></td>
-    </tr>
-</table>
-</form>
-</div><!--- end of style_div -->
-<br />
-<div id="content-input">
-	<form method="post">
-    <table border="1" width="805px" align="center" cellpadding="3" class="mytable" cellspacing="0">
-        <tr>
-            <th style="text-align: center;">No</th>
+<div class="btn_pos">
+        <form method="post">
+            <input type="text" name="searchtxt" class="input_box_pos form-control" placeholder="Search name.." />
+            <div class="btn_pos_search">
+            <input type="submit" class="btn btn-primary btn-large" name="btnsearch" value="Search"/>&nbsp;&nbsp;
+            <a href="?tag=student_entry"><input type="button" class="btn btn-large btn-primary" value="Register new" name="butAdd"/></a>
+            </div>
+        </form>
+    </div><br><br>
+            
+            
+<div class="table_margin">
+<table class="table table-bordered">
+        <thead>
+            <tr>
+            <th style="text-align: center;">No.</th>
             <th style="text-align: center;">Users Name</th>
             <th style="text-align: center;">Password</th>
             <th style="text-align: center;">Type</th>
             <th style="text-align: center;">Note</th>
-            <th style="text-align: center;"colspan="2">Operation</th>
+            <th style="text-align: center;" colspan="2">Operation</th>
         </tr>
         
-         <?php
-		 
-		 $key="";
+        <?php
+	$key="";
 	if(isset($_POST['searchtxt']))
 		$key=$_POST['searchtxt'];
 	
 	if($key !="")
 		$sql_sel=mysqli_query($con,"SElECT * FROM users_tbl WHERE username  like '%$key%' ");
 	else
-        $sql_sel=mysqli_query($con,"SELECT * FROM users_tbl");
+		 $sql_sel=mysqli_query($con,"SELECT * FROM users_tbl");
+	
 		
-		
+       
     $i=0;
     while($row=mysqli_fetch_array($sql_sel)){
     $i++;
-    $color=($i%2==0)?"lightblue":"white";
     ?>
-      <tr bgcolor="<?php echo $color?>">
+      <tr>
             <td><?php echo $i;?></td>
             <td><?php echo $row['username'];?></td>
             <td><?php echo $row['password'];?></td>
             <td><?php echo $row['type'];?></td>
             <td><?php echo $row['note'];?></td>
-            <td align="center"><a href="?tag=susers_entry&opr=upd&rs_id=<?php echo $row['u_id'];?>" title="Upate"><img style="-webkit-box-shadow: 0px 0px 0px 0px rgba(50, 50, 50, 0.75);-moz-box-shadow:    0px 0px 0px 0px rgba(50, 50, 50, 0.75);box-shadow:         0px 0px 0px 0px rgba(50, 50, 50, 0.75);" src="picture/update.png" height="20" alt="Update" /></a></td>
-            <td align="center"><a href="?tag=view_users&opr=del&rs_id=<?php echo $row['u_id'];?>" title="Delete"><img style="-webkit-box-shadow: 0px 0px 0px 0px rgba(50, 50, 50, 0.75);-moz-box-shadow:    0px 0px 0px 0px rgba(50, 50, 50, 0.75);box-shadow:         0px 0px 0px 0px rgba(50, 50, 50, 0.75);" src="picture/delete.jpg" height="20" alt="Delete" /></a></td>
+            <td><a href="?tag=users_entry&opr=upd&rs_id=<?php echo $row['u_id'];?>" title="Update"><img style="-webkit-box-shadow: 0px 0px 0px 0px rgba(50, 50, 50, 0.75);-moz-box-shadow:    0px 0px 0px 0px rgba(50, 50, 50, 0.75);box-shadow:         0px 0px 0px 0px rgba(50, 50, 50, 0.75);" src="picture/update.png" height="20" alt="Update" /></a></td>
+            <td><a href="?tag=view_users&opr=del&rs_id=<?php echo $row['u_id'];?>" title="Delete"><img style="-webkit-box-shadow: 0px 0px 0px 0px rgba(50, 50, 50, 0.75);-moz-box-shadow:    0px 0px 0px 0px rgba(50, 50, 50, 0.75);box-shadow:         0px 0px 0px 0px rgba(50, 50, 50, 0.75);" src="picture/delete.jpg" height="20" alt="Delete" /></a></td>
+             
         </tr>
     <?php	
     }
+	// ----- for search studnens------	
+		
+	
     ?>
-     </table>
-   </form>
-</div><!-- end of content-input -->
+    </table>
+</form>
+</div>
 </body>
 </html>
+
+
