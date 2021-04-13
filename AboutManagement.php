@@ -7,7 +7,7 @@
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css"/>
         <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
         <link rel="stylesheet" type="text/css" href="css/home.css" />
-        <title>This project is develope by Projectworlds.in</title>
+        <title>This project is developed by SFIT student.</title>
     </head>
     <body>
         <div class="panel panel-default">
@@ -18,9 +18,9 @@
                         </div><br><br>
                         
                         <h1><strong>Project title: </strong>College Management System</h1>
-                        <h1><strong>Made by: </strong>projectworlds.in</h1>
-                        <h1><strong>College: </strong>CIMT Bhilai</h1>
-                        <h1><strong>Branch: </strong>Computer science.</h1>
+                        <h1><strong>Made by: </strong>Ankit Jaiswal and Group</h1>
+                        <h1><strong>College: </strong>St. Francis Institute Of Technology</h1>
+                        <h1><strong>Branch: </strong>Computer Engineering</h1>
                         </div>
         </div>
     </body>
