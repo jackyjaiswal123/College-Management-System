@@ -89,7 +89,7 @@ if($opr=="upd")
     					<select name="sudenttxt" style="width: 200px;">
                                             <option>Choose location</option>
                                 <?php
-                                   $location=mysqli_query("SELECT * FROM location_tb");
+                                   $location=mysqli_query($con,"SELECT * FROM location_tb");
                                        while($row=mysqli_fetch_array($location)){
 										    if($row['loca_id']==$rs_upd['loca_id'])
 								   		$iselect="selected";
@@ -145,7 +145,7 @@ else
     					<select name="sudenttxt" style="width: 200px;">
                                             <option>Choose location</option>
                                 <?php
-                                   $location=mysqli_query("SELECT * FROM location_tb");
+                                   $location=mysqli_query($con,"SELECT * FROM location_tb");
                                        while($row=mysqli_fetch_array($location)){
 								?>
                                  	<option value="<?php echo $row['loca_id']?>"><?php echo $row['l_name'];?></option>
