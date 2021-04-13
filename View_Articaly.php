@@ -63,9 +63,9 @@ if(isset($_GET['rs_id']))
 				$key=$_POST['searchtxt'];
 			
 			if($key !="")
-				$sql_sel=mysqli_query("SElECT * FROM article_tbl WHERE  title  like '%$key%' ");
+				$sql_sel=mysqli_query($con,"SElECT * FROM article_tbl WHERE  title  like '%$key%' ");
 			else
-		 $sql_sel=mysqli_query("SELECT * FROM article_tbl");
+		 $sql_sel=mysqli_query($con,"SELECT * FROM article_tbl");
 			 
 			 $i=0;
 			while($row=mysqli_fetch_array($sql_sel)){
