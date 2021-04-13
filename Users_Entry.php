@@ -1,6 +1,7 @@
 <?php
 $id="";
 $opr="";
+$con= mysqli_connect("remotemysql.com", "fqpcD1WsmT", "Xt9SLaf4VJ" ,"fqpcD1WsmT");
 if(isset($_GET['opr']))
 	$opr=$_GET['opr'];
 
@@ -15,7 +16,7 @@ if(isset($_POST['btn_sub'])){
 	$note=$_POST['notetxt'];	
 	
 
-$sql_ins=mysqli_query("INSERT INTO users_tbl 
+$sql_ins=mysqli_query($con,"INSERT INTO users_tbl 
 						VALUES(
 							NULL,
 							'$username',
@@ -38,7 +39,7 @@ if(isset($_POST['btn_upd'])){
 	$type=$_POST['typetxt'];
 	$note=$_POST['notetxt'];
 	
-	$sql_update=mysqli_query("UPDATE users_tbl SET 
+	$sql_update=mysqli_query($con,"UPDATE users_tbl SET 
 								username='$username' ,
 								password='$pwd' , 
 								type='$note' ,
@@ -64,7 +65,7 @@ if(isset($_POST['btn_upd'])){
 <?php
 if($opr=="upd")
 {
-	$sql_upd=mysqli_query("SELECT * FROM users_tbl WHERE u_id=$id");
+	$sql_upd=mysqli_query($con,"SELECT * FROM users_tbl WHERE u_id=$id");
 	$rs_upd=mysqli_fetch_array($sql_upd);
 ?>
 	<div id="top_style">
