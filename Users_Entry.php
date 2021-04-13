@@ -1,7 +1,7 @@
 <?php
 $id="";
 $opr="";
-$con= mysqli_connect("remotemysql.com", "fqpcD1WsmT", "Xt9SLaf4VJ" ,"fqpcD1WsmT");
+$con= mysqlii_connect("remotemysqli.com", "fqpcD1WsmT", "Xt9SLaf4VJ" ,"fqpcD1WsmT");
 if(isset($_GET['opr']))
 	$opr=$_GET['opr'];
 
@@ -60,133 +60,65 @@ if(isset($_POST['btn_upd'])){
 <title>Untitled Document</title>
 <link rel="stylesheet" type="text/css" href="css/style_entry.css" />
 </head>
-
 <body>
+
 <?php
+
 if($opr=="upd")
 {
 	$sql_upd=mysqli_query($con,"SELECT * FROM users_tbl WHERE u_id=$id");
 	$rs_upd=mysqli_fetch_array($sql_upd);
+	
 ?>
-	<div id="top_style">
-        <div id="top_style_text">
-        Users Entry
-        </div><!-- end of top_style_text-->
-       <div id="top_style_button"> 
-       		<form method="post">
-            	<a href="?tag=view_users"><input type="button" name="btn_view" value="Back"  title="Back" id="button_view" style="width:70px;"  /></a>
-             
-       		</form>
-       </div><!-- end of top_style_button-->
-</div><!-- end of top_style-->
+<div class="panel panel-default">
+  		<div class="panel-heading"><h1><span class="glyphicon glyphicon-hdd"></span> Users Update Form</h1></div>
+  			<div class="panel-body">
+			<div class="container">
+				<p style="text-align:center;">Here, you'll update the users detail to record into database.</p>
+			</div>
 
-<div id="style_informations">
-	<form method="post">
-    	<div>
-    	<table border="0" cellpadding="4" cellspacing="0">
+<div class="container_form">
+    <form method="post">
+        <div class='faculty_pos'>
         
-            <tr>
-            	<td>Username </td>
-            	<td>
-                	<input type="text" name="usertxt" id="textbox" value="<?php echo $rs_upd['username'];?>" />
-                </td>
-            </tr>
-            
-            <tr>
-            	<td>Password</td>
-            	<td>
-                	<input type="text" name="pwdtxt" id="textbox" value="<?php  echo $rs_upd['password'];?>" />
-                </td>
-            </tr>
-            
-            <tr>
-            	<td>Type</td>
-            	<td>
-                	<input type="text" name="typetxt" id="textbox"  value="<?php echo $rs_upd['type'];?>"/>
-                </td>
-            </tr>
-            
-            <tr>
-            	<td>Note</td>
-                <td>
-                	<textarea name="notetxt" cols="23" rows="5"><?php echo $rs_upd['note'];?></textarea>
-                </td>
-            </tr>
-            
-            <tr>
-                <td colspan="2">
-                	<input type="reset" value="Cancel" id="button-in"/>
-                	<input type="submit" name="btn_upd" value="Update" id="button-in"  />
-                </td>
-            </tr>
-        </table>
-
-   </div>
+            <input type="text" style="width: 250px;" class="form-control" name="usertxt" id="textbox" value="<?php echo $rs_upd['username'];?>"/><br>
+	    <input type="text" style="width: 250px;" class="form-control" name="pwdtxt" id="textbox" value="<?php echo $rs_upd['password'];?>"/><br>
+            <input type="text" style="width: 250px;" class="form-control" name="typetxt" id="textbox" value="<?php echo $rs_upd['type'];?>"/><br>
+            <textarea name="notetxt" class="form-control" cols="18" value='<?php  echo $rs_upd['note'];?>' rows="4"></textarea><br><Br>
+        
+            <input type="submit" name="btn_upd" href="#" class="btn btn-primary btn-large" value="Register" />&nbsp;&nbsp;&nbsp;
+	    <input type="reset"  href="#" class="btn btn-primary btn-large" value="Cancel" />
+        </div>
     </form>
-
-</div><!-- end of style_informatios -->
+</div>
 
 <?php	
 }
 else
 {
 ?>
-	<div id="top_style">
-        <div id="top_style_text">
-        Users Entry
-        </div><!-- end of top_style_text-->
-       <div id="top_style_button"> 
-       		<form method="post">
-            	<a href="?tag=view_users"><input type="button" name="btn_view" value="View_Users"  title="View Users" id="button_view" style="width:120px;"  /></a>
-             
-       		</form>
-       </div><!-- end of top_style_button-->
-</div><!-- end of top_style-->
+<div class="panel panel-default">
+  		<div class="panel-heading"><h1><span class="glyphicon glyphicon-hdd"></span> Users Entry Form</h1></div>
+  			<div class="panel-body">
+			<div class="container">
+				<p style="text-align:center;">Here, you'll add new user's detail to record into database.</p>
+			</div>
 
-<div id="style_informations">
-	<form method="post">
-    	<div>
-    	<table border="0" cellpadding="4" cellspacing="0">
+
+<div class="container_form">
+    <form method="post">
+        <div class='faculty_pos'>
+	
+            <input type="text" style="width: 250px;" class="form-control" name="usertxt" placeholder='User Name'/><br>
+	    <input type="text" style="width: 250px;" class="form-control" name="pwdtxt" placeholder='Passwprd'/><br>
+	    <input type="text" style="width: 250px;" class="form-control" name="typetxt" placeholder='Type'/><br>
+            
+            <textarea name="notetxt" class="form-control" cols="18" placeholder='Add notes..' rows="4"></textarea><br><Br>
         
-            <tr>
-            	<td>Username </td>
-            	<td>
-                	<input type="text" name="usertxt" id="textbox" />
-                </td>
-            </tr>
-            
-            <tr>
-            	<td>Password</td>
-            	<td>
-                	<input type="text" name="pwdtxt" id="textbox" />
-                </td>
-            </tr>
-            
-            <tr>
-            	<td>Type</td>
-            	<td>
-                	<input type="text" name="typetxt" id="textbox" />
-                </td>
-            </tr>
-            
-            <tr>
-            	<td>Note</td>
-                <td>
-                	<textarea name="notetxt" cols="23" rows="5"></textarea>
-                </td>
-            </tr>
-            
-            <tr>
-                <td colspan="2">
-                	<input type="reset" value="Cancel" id="button-in"/>
-                	<input type="submit" name="btn_sub" value="Add Now" id="button-in"  />
-                </td>
-            </tr>
-        </table>
-
-   </div>
+            <input type="submit" name="btn_sub" href="#" class="btn btn-primary btn-large" value="Register" />&nbsp;&nbsp;&nbsp;
+	    <input type="reset"  href="#" class="btn btn-primary btn-large" value="Cancel" />
+        </div>
     </form>
-
 </div><!-- end of style_informatios -->
 
 <?php
