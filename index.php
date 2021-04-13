@@ -48,14 +48,14 @@
 	<div class="container">
     	<div class="container2">
     		<div class="h1_pos">
-    			<h1>College authorities for only staff members. </h1>
+    			<h1>For SFIT Staff Only. </h1>
     		</div><br><br><br>
     		<form method="post">
                     <input type="text" class="form-control" name="unametxt" placeholder="Username" title="Enter username here" /><br>
                     <input type="password" class="form-control" name="pwdtxt" placeholder="Password" title="Enter username here" /><br>
     		<input type="submit" href="#" class="btn btn-default" name="btn_log" value="Sign in" style="float: right;"/>
     		<div class="about_pos">
-                    <a href="AboutManagement.php" style="text-decoration:none; color: silver">About management</a>
+                    <a href="AboutManagement.php" class="btn btn-primary btn-large" style="text-decoration:10%; color: white">About Project<i class="icon-white icon-check"></i></a>
     		</div>
     		</form>
     	</div>
