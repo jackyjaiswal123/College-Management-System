@@ -28,7 +28,7 @@
     </div>
     
     <div class="img_home_pos">
-        <a href="everyone.php"><img src="images/img21.jpg" height="90" alt="Projectworlds technical university" /></a><span class="header_pos">Projectworlds Technical University</span>
+	    <a href="everyone.php"><img src="images/sfit_logo.jpg" height="90" alt="St. Francis Institute Of Technology" /></a><span class="header_pos">St. Francis Institute Of Technology</span>
     </div><br>
                         
                         <div class="dropdownmenu_container">
@@ -93,8 +93,6 @@
 		</div>                
 	</div>
         
-        <div class="bottom_pos">
-            <a href="AboutManagement.php" style="text-decoration: none;">About management</a>
-        </div>
+        
 </body>
 </html>
