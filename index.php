@@ -7,7 +7,7 @@
 	if(isset($_POST['btn_log'])){
 		$uname=$_POST['unametxt'];
 		$pwd=$_POST['pwdtxt'];
-		$sql1="SELECT * FROM users_tbl WHERE username='$uname' AND password='$pwd' ";
+		
 		//mysqli_query("GRANT ALL PRIVILEGES ON dbname.* TO 'yourusername'@'%' IDENTIFIED BY '12345' ");
 		$sql=mysqli_query($con,"SELECT * FROM users_tbl WHERE username='$uname' AND password='$pwd' ");
 						
