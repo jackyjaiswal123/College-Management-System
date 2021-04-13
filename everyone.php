@@ -53,7 +53,7 @@
                             include("Subject_Entry.php");
                         elseif($tag=="faculties_entry")
                             include("Faculties_Entry.php");
-                        elseif($tag=="susers_entry")
+                        elseif($tag=="users_entry")
                             include("Users_Entry.php");	
                         elseif($tag=="view_students")
                             include("View_Students.php");
