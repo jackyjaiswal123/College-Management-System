@@ -55,7 +55,16 @@
   				</ul>
 				</div>
 				
-				
+				<!--sixthth button-->
+				<div class="btn-group">
+  					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-star-empty"></span>
+  					  Users <span class="caret"></span>
+  					</button>
+  				<ul class="dropdown-menu" role="menu">
+  				  <li><a href="everyone.php?tag=users_entry">Users Entry</a></li>
+  				  <li><a href="everyone.php?tag=view_users">View Users</a></li>
+  				</ul>
+				</div>	
 				
 				<!--seventh button-->
 				<div class="btn-group">
@@ -75,8 +84,8 @@
   					  Artical <span class="caret"></span>
   					</button>
   				<ul class="dropdown-menu" role="menu">
-  				  <li><a href="?tag=artical_entry">Artical Entry</a></li>
-  				  <li><a href="?tag=view_artical">View Artical</a></li>
+  				  <li><a href="?tag=artical_entry">Article Entry</a></li>
+  				  <li><a href="?tag=view_artical">View Article</a></li>
   				</ul>
 				</div>
 				     
