@@ -1,6 +1,7 @@
 <?php
 $id="";
 $opr="";
+$con= mysqli_connect("remotemysql.com", "fqpcD1WsmT", "Xt9SLaf4VJ" ,"fqpcD1WsmT");
 if(isset($_GET['opr']))
 	$opr=$_GET['opr'];
 
@@ -14,7 +15,8 @@ if(isset($_POST['btn_sub'])){
 	$status=$_POST['genderrdo'];
 	$note=$_POST['notetxt'];
 	
-	$sql_add=mysqli_query("INSERT INTO article_tbl 
+	
+	$sql_add=mysqli_query($con,"INSERT INTO article_tbl 
 							VALUES(
 								NULL,
 								$lid,
@@ -38,7 +40,7 @@ if(isset($_POST['btn_upd'])){
 	$status=$_POST['genderrdo'];
 	$note=$_POST['notetxt'];
 	
-	$sql_update=mysqli_query("UPDATE  article_tbl SET	
+	$sql_update=mysqli_query($con,"UPDATE  article_tbl SET	
 							loca_id='$loca_id' ,
 							title='$title' ,
 							content='$content' ,
