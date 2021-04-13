@@ -1,6 +1,7 @@
 <?php
 	$msg="";
 	$opr="";
+	$con= mysqli_connect("remotemysql.com", "fqpcD1WsmT", "Xt9SLaf4VJ" ,"fqpcD1WsmT");
 	if(isset($_GET['opr']))
 	$opr=$_GET['opr'];
 	
@@ -9,7 +10,7 @@ if(isset($_GET['rs_id']))
 	
 	if($opr=="del")
 {
-	$del_sql=mysqli_query("DELETE FROM facuties_tbl WHERE faculties_id=$id");
+	$del_sql=mysqli_query($con,"DELETE FROM facuties_tbl WHERE faculties_id=$id");
 	if($del_sql)
 		$msg="1 Record Deleted... !";
 	else
