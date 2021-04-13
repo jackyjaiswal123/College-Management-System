@@ -2,7 +2,7 @@
 
 $id=" ";
 $opr=" ";
-
+$con= mysqli_connect("remotemysql.com", "fqpcD1WsmT", "Xt9SLaf4VJ" ,"fqpcD1WsmT");
 if(isset($_GET['opr']))
 	$opr=$_GET['opr'];
 
@@ -16,7 +16,7 @@ if(isset($_POST['btn_sub'])){
 	$note	=$_POST['notetxt'];
 	
 
-$sql_ins=mysqli_query("INSERT INTO location_tb 
+$sql_ins=mysqli_query($con,"INSERT INTO location_tb 
 						VALUES(
 							NULL,
 							'$loca_name',
@@ -37,7 +37,7 @@ if(isset($_POST['btn_upd'])){
 	$description=$_POST['descriptxt'];
 	$note=$_POST['notetxt'];
 	
-	$sql_update=mysqli_query("UPDATE location_tb SET	
+	$sql_update=mysqli_query($con,"UPDATE location_tb SET	
 							l_name='$loca_name' ,
 							description='$description' ,
 							note='$note'
@@ -71,7 +71,7 @@ else
 
 if($opr=="upd")
 {
-	$sql_upd=mysqli_query("SELECT * FROM location_tb WHERE loca_id=$id");
+	$sql_upd=mysqli_query($con,"SELECT * FROM location_tb WHERE loca_id=$id");
 	$rs_upd=mysqli_fetch_array($sql_upd);
 	
 ?>
