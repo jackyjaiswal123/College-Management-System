@@ -76,7 +76,7 @@ if($opr=="upd")
 	
 ?>
 <div class="panel panel-default">
-  		<div class="panel-heading"><h1><span class="glyphicon glyphicon-hdd"></span> Users Update Form</h1></div>
+  		<div class="panel-heading"><h1><span class="glyphicon glyphicon-user"></span> Users Update Form</h1></div>
   			<div class="panel-body">
 			<div class="container">
 				<p style="text-align:center;">Here, you'll update the users detail to record into database.</p>
@@ -103,7 +103,7 @@ else
 {
 ?>
 <div class="panel panel-default">
-  		<div class="panel-heading"><h1><span class="glyphicon glyphicon-hdd"></span> Users Entry Form</h1></div>
+  		<div class="panel-heading"><h1><span class="glyphicon glyphicon-user"></span> Users Entry Form</h1></div>
   			<div class="panel-body">
 			<div class="container">
 				<p style="text-align:center;">Here, you'll add new user's detail to record into database.</p>
@@ -115,7 +115,7 @@ else
         <div class='faculty_pos'>
 	
             <input type="text" style="width: 250px;" class="form-control" name="usertxt" placeholder='User Name'/><br>
-	    <input type="text" style="width: 250px;" class="form-control" name="pwdtxt" placeholder='Passwprd'/><br>
+	    <input type="text" style="width: 250px;" class="form-control" name="pwdtxt" placeholder='Password'/><br>
 	    <input type="text" style="width: 250px;" class="form-control" name="typetxt" placeholder='Type'/><br>
             
             <textarea name="notetxt" class="form-control" cols="18" placeholder='Add notes..' rows="4"></textarea><br><Br>
