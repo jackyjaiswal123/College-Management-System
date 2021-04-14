@@ -1,11 +1,11 @@
 <?php
 
-$msg="";
-$opr="";
-$id="";
-$con= mysqli_connect("remotemysql.com", "fqpcD1WsmT", "Xt9SLaf4VJ" ,"fqpcD1WsmT");
+	$msg="";
+	$opr="";
+	$id="";
+	$con= mysqli_connect("remotemysql.com", "fqpcD1WsmT", "Xt9SLaf4VJ" ,"fqpcD1WsmT");
 	
-if(isset($_GET['opr'])){
+	if(isset($_GET['opr'])){
 	$opr=$_GET['opr'];}
 	
 if(isset($_GET['rs_id'])){
@@ -275,7 +275,7 @@ else
 				
 				<div class="teacher_radio_pos">
 					<input type="radio" name="genderrdo" value="Male" checked /> <span class="p_font">&nbsp;Male</span>
-					<input type="radio" name="genderrdo" value="Female" checked /> <span class="p_font">&nbsp;Female</span>
+					<input type="radio" name="genderrdo" value="Female" checked/> <span class="p_font">&nbsp;Female</span>
 				</div><br>
 				
 				<div class="teacher_bday_box">
@@ -358,8 +358,8 @@ else
 				
 				<div class="teacher_married_pos">
 					<span class="p_font">Married</span>
-					<input type="radio" name="marriedrdo" value="Yes" checked /> <span class="p_font">&nbsp;Yes</span>
-					<input type="radio" name="marriedrdo" value="No" checked /> <span class="p_font">&nbsp;No</span>
+					<input type="radio" name="marriedrdo" value="Yes" checked/> <span class="p_font">&nbsp;Yes</span>
+					<input type="radio" name="marriedrdo" value="No" checked/> <span class="p_font">&nbsp;No</span>
 				</div><br>
 				
 				<div class="teacher_mobile_pos">
