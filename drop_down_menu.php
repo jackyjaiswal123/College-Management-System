@@ -57,7 +57,7 @@
 				
 				<!--sixthth button-->
 				<div class="btn-group">
-  					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-star-empty"></span>
+  					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>
   					  Users <span class="caret"></span>
   					</button>
   				<ul class="dropdown-menu" role="menu">
