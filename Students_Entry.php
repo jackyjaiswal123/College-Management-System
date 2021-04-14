@@ -110,8 +110,8 @@ if($opr=="upd")
 				</div><br>
 				
 				<div class="teacher_radio_pos">
-					<input type="radio" name="gender" value="Male" <?php if($rs_upd['gender']=="Male") echo "checked";?> /> <span class="p_font">&nbsp;Male</span>
-					<input type="radio" name="gender" value="Female" <?php if($rs_upd['gender']=="Female") echo "checked";?> /> <span class="p_font">&nbsp;Female</span>
+					<input type="radio" name="gender" checked value="Male" <?php if($rs_upd['gender']=="Male") echo "checked";?> /> <span class="p_font">&nbsp;Male</span>
+					<input type="radio" name="gender" checked value="Female" <?php if($rs_upd['gender']=="Female") echo "checked";?> /> <span class="p_font">&nbsp;Female</span>
 				</div><br>
 				
 				<div class="teacher_bday_box">
@@ -230,8 +230,8 @@ else
 				</div><br>
 				
 				<div class="teacher_radio_pos">
-					<input type="radio" name="gender" value="Male" /> <span class="p_font">&nbsp;Male</span>
-					<input type="radio" name="gender" value="Female" /> <span class="p_font">&nbsp;Female</span>
+					<input type="radio" name="gender"  value="Male" checked /> <span class="p_font">&nbsp;Male</span>
+					<input type="radio" name="gender" value="Female" checked /> <span class="p_font">&nbsp;Female</span>
 				</div><br>
 				
 				<div class="teacher_bday_box">
