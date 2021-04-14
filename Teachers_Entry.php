@@ -126,8 +126,8 @@ if($opr=="upd")
 				</div><br>
 				
 				<div class="teacher_radio_pos">
-					<input type="radio" name="genderrdo" value="Male"<?php if($rs_upd['gender']=="Male") echo "checked";?> /> <span class="p_font">&nbsp;Male</span>
-					<input type="radio" name="genderrdo" value="Female"<?php if($rs_upd['gender']=="Female") echo "checked";?> /> <span class="p_font">&nbsp;Female</span>
+					<input type="radio" name="genderrdo" checked value="Male"<?php if($rs_upd['gender']=="Male") echo "checked";?> /> <span class="p_font">&nbsp;Male</span>
+					<input type="radio" name="genderrdo" checked value="Female"<?php if($rs_upd['gender']=="Female") echo "checked";?> /> <span class="p_font">&nbsp;Female</span>
 				</div><br>
 				
 				<div class="teacher_bday_box">
@@ -230,8 +230,8 @@ if($opr=="upd")
 				
 				<div class="teacher_married_pos">
 					<span class="p_font">Married</span>
-					<input type="radio" name="marriedrdo" value="Yes"<?php if($rs_upd['married']=="Yes") echo "checked";?> /> <span class="p_font">&nbsp;Yes</span>
-					<input type="radio" name="marriedrdo" value="No"<?php if($rs_upd['married']=="No") echo "checked";?> /> <span class="p_font">&nbsp;No</span>
+					<input type="radio" name="marriedrdo" checked value="Yes"<?php if($rs_upd['married']=="Yes") echo "checked";?> /> <span class="p_font">&nbsp;Yes</span>
+					<input type="radio" name="marriedrdo" checked value="No"<?php if($rs_upd['married']=="No") echo "checked";?> /> <span class="p_font">&nbsp;No</span>
 				</div><br>
 				
 				<div class="teacher_mobile_pos">
@@ -274,8 +274,8 @@ else
 				</div><br>
 				
 				<div class="teacher_radio_pos">
-					<input type="radio" name="genderrdo" value="Male" /> <span class="p_font">&nbsp;Male</span>
-					<input type="radio" name="genderrdo" value="Female" /> <span class="p_font">&nbsp;Female</span>
+					<input type="radio" name="genderrdo" value="Male" checked /> <span class="p_font">&nbsp;Male</span>
+					<input type="radio" name="genderrdo" value="Female" checked /> <span class="p_font">&nbsp;Female</span>
 				</div><br>
 				
 				<div class="teacher_bday_box">
@@ -358,8 +358,8 @@ else
 				
 				<div class="teacher_married_pos">
 					<span class="p_font">Married</span>
-					<input type="radio" name="marriedrdo" value="Yes"/> <span class="p_font">&nbsp;Yes</span>
-					<input type="radio" name="marriedrdo" value="No"/> <span class="p_font">&nbsp;No</span>
+					<input type="radio" name="marriedrdo" value="Yes" checked /> <span class="p_font">&nbsp;Yes</span>
+					<input type="radio" name="marriedrdo" value="No" checked /> <span class="p_font">&nbsp;No</span>
 				</div><br>
 				
 				<div class="teacher_mobile_pos">
